@@ -1,0 +1,12 @@
+body{
+    background-color:darkblue;
+}
+
+.titulo{
+    background-color:gray;
+    text-align:center;
+    color:white;
+}
+.sobre{
+    background-color:cyan;
+}
