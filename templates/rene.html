@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="../static/css/arthur.css">
 </head>
 <body>
+    <p>{{mensagem}}</p>
     <div class="formulario">
         <form action="/cadastrar" method="post">
+            <label>Nome:</label><br>
+            <input type="text" name="nome"><br>
             <label>usuario:</label><br>
-            <input type="text"><br>
+            <input type="text" name="loginusuario"><br>
             <label>senha:</label><br>
-            <input type="password"><br>
+            <input type="password" name="senhausuario"><br>
             <button type="submit">entrar</button>
         </form>
     </div>
