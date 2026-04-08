@@ -23,6 +23,18 @@ def fazercadastro():
 
 @app.route('/login')
 def login():
-    return render_template('rene.html')
+    login = request.form.get('loginusuario')
+    senha = request.form.get('senhausuario')
+    logado = False
+    for u in usuarios:
+        if login == u[1] and senha == u[2]:
+            logado = True
+            break
+    if logado:
+        return render_template('logado.html')
+    else:
+        texto = 'login ou senha incorretos'
+        return render_template('index.html' , msg = texto)
+
 
 app.run()
