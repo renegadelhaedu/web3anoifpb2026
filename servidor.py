@@ -8,5 +8,7 @@ app = Flask(__name__)
 def inicial():
     return render_template('eu.html')
 
+#@app.route('/cadastrar', methods=['POST'])
+
 #executar o servidor
 app.run(host='0.0.0.0' , port=5007)
