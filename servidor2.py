@@ -29,7 +29,7 @@ def login():
     senha = request.form.get('senhausuario')
     logado = False
     for u in usuarios:
-        if login == u[1] and senha == u[2]:
+        if login == u.get_login() and senha == u.get_senha():
             logado = True
             break
     if logado:
