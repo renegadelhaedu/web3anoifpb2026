@@ -21,7 +21,7 @@ def fazercadastro():
     return render_template('rene.html', mensagem=texto)
 
 
-@app.route('/login')
+@app.route('/login', methods=['POST'])
 def login():
     login = request.form.get('loginusuario')
     senha = request.form.get('senhausuario')
@@ -37,4 +37,4 @@ def login():
         return render_template('index.html' , msg = texto)
 
 
-app.run()
+app.run(debug=True)

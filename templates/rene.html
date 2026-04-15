@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>3rão 2024.1</title>
-    <link rel="stylesheet" href="../static/css/arthur.css">
+    <link rel="stylesheet" href="../static/css/rene.css">
 </head>
 <body>
-    <p>{{mensagem}}</p>
-    <div class="formulario">
-        <form action="/cadastrar" method="post">
-            <label>Nome:</label><br>
-            <input type="text" name="nome"><br>
-            <label>usuario:</label><br>
-            <input type="text" name="loginusuario"><br>
-            <label>senha:</label><br>
-            <input type="password" name="senhausuario"><br>
-            <button type="submit">entrar</button>
-        </form>
+
+    <div class="topo">
+        <h1>Página pessoal rene</h1>
+
     </div>
+    <div class="conteudo">
+        <div class="col1">
+
+                <p>Fazer login</p>
+                <form action="/login" method="post">
+                    <label>usuario:</label><br>
+                    <input type="text" name="loginusuario"><br>
+                    <label>senha:</label><br>
+                    <input type="password" name="senhausuario"><br>
+                    <button type="submit">Logar</button>
+                </form>
+
+        </div>
+        <div class="col2">
+            <p>Quero falar um pouco sobre mim... </p>
+
+        </div>
+        <div class="col3">
+
+                <p>Cadastro de usuário</p>
+                <form action="/cadastrar" method="post">
+                    <label>Nome:</label><br>
+                    <input type="text" name="nome"><br>
+                    <label>usuario:</label><br>
+                    <input type="text" name="loginusuario"><br>
+                    <label>senha:</label><br>
+                    <input type="password" name="senhausuario"><br>
+                    <button type="submit">Cadastrar</button>
+                </form>
+
+        </div>
+    </div>
+
+
+
+
+
 </body>
 </html>
