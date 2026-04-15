@@ -1,5 +1,6 @@
 #exemplo feito em sala no dia 08 04
 from flask import *
+from modelos.usuario import Usuario
 
 app = Flask(__name__)
 
@@ -15,7 +16,8 @@ def fazercadastro():
     nome = request.form.get('nome')
     login = request.form.get('loginusuario')
     senha = request.form.get('senhausuario')
-    usuarios.append([nome,login,senha])
+    novo_user = Usuario(nome=nome, login=login ,senha=senha)
+    usuarios.append(novo_user)
     texto = 'usuario cadastrado com sucesso!'
 
     return render_template('rene.html', mensagem=texto)
