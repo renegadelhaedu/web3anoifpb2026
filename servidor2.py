@@ -17,15 +17,15 @@ def meu_lugar():
 
 @app.route('/amigos')
 def meus_amigos():
-    return render_template('amigos.html')
+    return render_template('internas/amigos.html')
 
 @app.route('/familia')
 def minha_familia():
-    return render_template('amigos.html')
+    return render_template('internas/familia.html')
 
 @app.route('/listar')
 def listar():
-    return render_template('amigos.html')
+    return render_template('internas/listar.html')
 
 @app.route('/cadastrar' , methods=['POST'])
 def fazercadastro():
