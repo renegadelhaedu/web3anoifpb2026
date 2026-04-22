@@ -10,6 +10,22 @@ usuarios = []
 def inicial():
     return render_template('rene.html')
 
+@app.route('/lugar')
+def meu_lugar():
+    return render_template('internas/lugar.html')
+
+
+@app.route('/amigos')
+def meus_amigos():
+    return render_template('amigos.html')
+
+@app.route('/familia')
+def minha_familia():
+    return render_template('amigos.html')
+
+@app.route('/listar')
+def listar():
+    return render_template('amigos.html')
 
 @app.route('/cadastrar' , methods=['POST'])
 def fazercadastro():
