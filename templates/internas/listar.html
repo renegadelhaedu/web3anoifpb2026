@@ -28,8 +28,15 @@
             <a href="/listar">Listar Usuários</a>
         </div>
     </div>
-    <div class="conteudo">
-        
+    <div class="minhalista">
+        {% for u in lista %}
+            <p>
+                Nome:{{u.get_nome()}}
+                |  Login:{{u.get_login()}}
+            </p>
+        {% endfor %}
+
+
     </div>
 
 

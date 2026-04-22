@@ -25,13 +25,15 @@ def minha_familia():
 
 @app.route('/listar')
 def listar():
-    return render_template('internas/listar.html')
+
+    return render_template('internas/listar.html', lista=usuarios)
 
 @app.route('/cadastrar' , methods=['POST'])
 def fazercadastro():
     nome = request.form.get('nome')
     login = request.form.get('loginusuario')
     senha = request.form.get('senhausuario')
+    #instanciando um objeto
     novo_user = Usuario(nome=nome, login=login ,senha=senha)
     usuarios.append(novo_user)
     texto = 'usuario cadastrado com sucesso!'
